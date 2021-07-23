@@ -1,0 +1,13 @@
+
+#txtSearch>button{
+	padding:5px;
+}
+#idSearch>button{
+	padding:5px;
+}
+.nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}

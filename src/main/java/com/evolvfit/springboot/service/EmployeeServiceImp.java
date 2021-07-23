@@ -10,6 +10,7 @@ import com.evolvfit.springboot.model.Employee;
 import com.evolvfit.springboot.repository.EmployeeRepository;
 
 @Service
+
 public class EmployeeServiceImp implements EmployeeService{
 
 	@Autowired
@@ -32,6 +33,9 @@ public class EmployeeServiceImp implements EmployeeService{
 	public Employee getEmployeeById(int id) {
 		Optional<Employee> opt = employeeRepo.findById(id);
 		Employee employee = null;
+		employee=opt.get();
+		System.out.println(employee.getId());
+		
 		if(opt.isPresent()) {
 			employee = opt.get();
 		}
@@ -46,9 +50,17 @@ public class EmployeeServiceImp implements EmployeeService{
 		this.employeeRepo.deleteById(id);
 		
 	}
-	
-	
-	
 
+	@Override
+	public List<Employee> findByKeyword(String keyword) {
+		
+		return employeeRepo.findByKeyword(keyword);
+	}
+
+	@Override
+	public List<Employee> findById(String id) {
+		// TODO Auto-generated method stub
+		return employeeRepo.findById(id);
+	}
 	
 }

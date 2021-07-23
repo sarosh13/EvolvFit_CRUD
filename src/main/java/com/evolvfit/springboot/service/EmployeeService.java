@@ -10,4 +10,7 @@ public interface EmployeeService {
 	void saveEmployee(Employee employee);
 	Employee getEmployeeById(int id);
 	void deleteEmployeeById(int id);
+	List<Employee> findByKeyword(String keyword);
+	List<Employee> findById(String id);
+	   
 }
