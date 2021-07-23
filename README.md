@@ -22,7 +22,7 @@ LEVEL 1: POST : Add a contact (Completed)
          PUT : Update a contact with given id. (Completed)
 
 LEVEL 2: GET : Get list of all contacts which match a search text (Completed)
-         GET : Add pagination to the above controller (PENDING)
+         GET : Add pagination to the above controller.
 
 LEVEL 3: Batch process to return a list duplicate contact. (PENDING)
          Exception Handling 
